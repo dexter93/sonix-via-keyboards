@@ -1,7 +1,7 @@
 {
     "name": "Redragon K630",
     "vendorId": "0x0C45",
-    "productId": "0x5004",
+    "productId": "0x50B4",
     "menus": ["qmk_rgb_matrix"],
     "matrix": {"rows": 5, "cols": 14},
     "layouts": {

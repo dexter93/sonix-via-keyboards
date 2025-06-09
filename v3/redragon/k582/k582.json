@@ -1,7 +1,7 @@
 {
   "name": "K582 Surara",
   "vendorId": "0x0C45",
-  "productId": "0x5004",
+  "productId": "0x50D4",
   "firmwareVersion": 0,
   "matrix": {
     "rows": 6,
