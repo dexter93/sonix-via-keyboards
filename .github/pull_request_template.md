@@ -9,19 +9,19 @@
 
 ## QMK Pull Request
 
-<!--- VIA support for new keyboards MUST be in QMK master already -->
+<!--- VIA support for new keyboards MUST be in SonixQMK sn32_develop already -->
 
-<!--- Add link to QMK Pull Request here. -->
+<!--- Add link to SonixQMK Pull Request here. -->
 
 <!--- THIS IS MANDATORY. -->
 
-<!--- IF THERE IS NO LINK TO SHOW VIA SUPPORT IS IN QMK MASTER ALREADY, -->
+<!--- IF THERE IS NO LINK TO SHOW VIA SUPPORT IS IN SonixQMK sn32_develop ALREADY, -->
 <!--- THIS PR WILL BE CLOSED IMMEDIATELY FOR WORKFLOW REASONS.  -->
 
 ## VIA Keymap Pull Request
 
 <!--- Add your VIA keymap PR here -->
-<!--- PR to https://github.com/the-via/qmk_userspace_via/pulls -->
+<!--- PR to https://github.com/SonixQMK/qmk_userspace_via/pulls -->
 
 <!--- All keyboards merge into QMK including and after 0.26.0 must have this VIA keymap PR -->
 
@@ -32,8 +32,8 @@
 
 <!--- Put an `x` in all the boxes that apply. -->
 
-- [ ] The VIA support for this keyboard is **MERGED** in QMK master already **(MANDATORY)**
-- [ ] VIA keymap is **MERGED** in VIA userspace master already **(MANDATORY)**
+- [ ] The VIA support for this keyboard is **MERGED** in SonixQMK sn32_develop already **(MANDATORY)**
+- [ ] VIA keymap is **MERGED** in SonixQMK's VIA Userspace main already **(MANDATORY)**
 - [ ] The VIA definition follows the guide here: https://caniusevia.com/docs/layouts
 - [ ] I have a V3 JSON version for this keyboard definition.**(MANDATORY)**
 - [ ] I have formatted the JSON file to have consistent formatting with the rest of the repository.
