@@ -93,7 +93,6 @@
     },
     "layouts": {
       "keymap": [
-        {"name": "LAYOUT_tkl_iso"},
         [
           {"c": "#3d3d3d", "t": "#ffffff"},
           "0,0",
