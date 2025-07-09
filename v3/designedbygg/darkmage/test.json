@@ -1,7 +1,7 @@
 {
   "name": "DesignedbyGG DarkMage",
   "vendorId": "0x320F",
-  "productId": "0x5116",
+  "productId": "0x5146",
   "keycodes": ["qmk_lighting"],
   "menus": ["qmk_rgb_matrix"],
   "matrix": {"rows": 5, "cols": 15},
