@@ -35,9 +35,8 @@ jobs:
           reviewdog_flags: "-tee"
           workdir: .
           level: error
-          filter_mode: nofilter
           fail_on_error: true
-          reporter: github-pr-check
+          reporter: github-pr-review
           prettier_flags: "./{src,v3}/**/*.json"
 
 
