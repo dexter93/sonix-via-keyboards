@@ -48,7 +48,7 @@ jobs:
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.SONIXQMK_BOT_TOKEN }}
-          commit-message: style: prettify files
+          commit-message: "style: prettify files"
           title: "style: prettify files"
           body: "This PR contains formatting changes made by Prettier."
           branch: ${{ env.BRANCH_NAME }}
