@@ -38,7 +38,7 @@ jobs:
           filter_mode: nofilter
           fail_on_error: true
           reporter: github-pr-check
-          prettier_flags: ./src/**/*.json ./v3/**/*.json
+          prettier_flags: "./{src,v3}/**/*.json"
 
 
       - uses: actions/upload-artifact@v4
