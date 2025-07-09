@@ -1,32 +1,55 @@
-name: Build
+name: Prettify
 
 on:
   push:
     branches: [master]
 
 jobs:
-  build:
+  prettify:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
 
     strategy:
       matrix:
         node-version: [18.x]
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.SONIXQMK_BOT_TOKEN }}
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Build
-        run: |
-          npm ci
-          npm run prettify-all
+      - name: Install dependencies
+        run: npm ci
 
-      - uses: actions/upload-artifact@v4
-        if: always()
+      - name: Run Prettier
+        run: npm run prettify-all || true
+
+      - name: Commit changes if any
+        run: |
+          if ! git diff --quiet; then
+            BRANCH="prettify/update-$(date +%s)"
+            git checkout -b $BRANCH
+            git add .
+            git commit -m "style: prettify files"
+            git push --set-upstream https://x-access-token:${{ secrets.SONIXQMK_BOT_TOKEN }}@github.com/${{ github.repository }} $BRANCH
+            echo "BRANCH_NAME=$BRANCH" >> $GITHUB_ENV
+          fi
+
+      - name: Create Pull Request
+        if: env.BRANCH_NAME != ''
+        uses: peter-evans/create-pull-request@v6
         with:
-          name: build-error
-          path: build-error.log
+          token: ${{ secrets.SONIXQMK_BOT_TOKEN }}
+          commit-message: style: prettify files
+          title: "style: prettify files"
+          body: "This PR contains formatting changes made by Prettier."
+          branch: ${{ env.BRANCH_NAME }}
+          delete-branch: true
