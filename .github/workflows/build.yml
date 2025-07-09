@@ -31,7 +31,6 @@ jobs:
       - name: Run Prettier with reviewdog
         uses: EPMatt/reviewdog-action-prettier@v1.2.0
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-pr-review
           prettier_flags: "./{src,v3}/**/*.json"
 
