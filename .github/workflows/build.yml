@@ -32,6 +32,10 @@ jobs:
         uses: EPMatt/reviewdog-action-prettier@v1.2.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          workdir: .
+          level: error
+          filter_mode: file
+          fail_on_error: true
           reporter: github-pr-review
           prettier_flags: "./src ./v3"
 
