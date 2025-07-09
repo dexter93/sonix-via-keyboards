@@ -34,7 +34,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           workdir: .
           level: error
-          filter_mode: diff_context
+          filter_mode: nofilter
           reporter: github-pr-check
           prettier_flags: ".prettierrc ./src ./v3"
 
