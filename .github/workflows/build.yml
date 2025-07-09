@@ -35,7 +35,7 @@ jobs:
           workdir: .
           level: error
           filter_mode: file
-          reporter: github-pr-review
+          reporter: github-pr-check
           prettier_flags: "--config .prettierrc ./src ./v3"
 
       - uses: actions/upload-artifact@v4
